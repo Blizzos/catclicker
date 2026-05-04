@@ -1,0 +1,51 @@
+body {
+    background-color: #f4e4c1;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+}
+
+#cat {
+    width: 200px;
+    cursor: pointer;
+}
+
+#cat:active {
+    transform: scale(0.95);
+}
+
+#pet-count{
+    font-size: 2rem;
+    margin: 0;
+}
+
+#multiplier {
+    font-size: 1rem;
+    color: #888;
+    margin: 0;
+}
+
+#buy-catsitter {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #c97b3a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+#buy-catsitter:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
