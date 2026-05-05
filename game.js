@@ -27,3 +27,13 @@ buyCatsitterBtn.addEventListener('click', function() {
         updateDisplay();
     }
 });
+
+setInterval(function() {
+    if (catsitters > 0) {
+        pets = pets + catsitters;
+        updateDisplay();
+    }
+}, 10000);
+
+updateDisplay();
+
