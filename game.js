@@ -15,7 +15,7 @@ catImage.addEventListener('click', function() {
 
 function updateDisplay() {
     petCountDisplay.textContent = 'Pets: ' + pets;
-    multiplierDisplay.textContent = 'Pets per 10 sec: ' + catsitters;
+    multiplierDisplay.textContent = 'Pets per sec: ' + catsitters;
     buyCatsitterBtn.disabled = pets < catsitterCost;
 }
 
@@ -33,7 +33,7 @@ setInterval(function() {
         pets = pets + catsitters;
         updateDisplay();
     }
-}, 10000);
+}, 1000);
 
 updateDisplay();
 
