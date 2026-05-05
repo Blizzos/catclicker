@@ -1,5 +1,5 @@
-let pets = 0;
-let catsitters = 0;
+let pets = Number(localStorage.getItem('pets')) || 0;
+let catsitters = Number(localStorage.getItem('catsitters')) || 0;
 const catsitterCost = 50;
 
 const catImage = document.getElementById('cat');
@@ -17,6 +17,10 @@ function updateDisplay() {
     petCountDisplay.textContent = 'Pets: ' + pets;
     multiplierDisplay.textContent = 'Pets per sec: ' + catsitters;
     buyCatsitterBtn.disabled = pets < catsitterCost;
+
+    // save progress every time the display updates
+    localStorage.setItem('pets', pets);
+    localStorage.setItem('catsitters', catsitters);
 }
 
 buyCatsitterBtn.addEventListener('click', function() {
