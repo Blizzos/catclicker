@@ -15,7 +15,7 @@ body {
 }
 
 #cat {
-    width: 200px;
+    max-width: 200px;
     cursor: pointer;
 }
 

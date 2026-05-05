@@ -1,6 +1,6 @@
 let pets = 0;
 let catsitters = 0;
-const catsitterCost = 1000;
+const catsitterCost = 50;
 
 const catImage = document.getElementById('cat');
 const petCountDisplay = document.getElementById('pet-count');
@@ -19,3 +19,11 @@ function updateDisplay() {
     buyCatsitterBtn.disabled = pets < catsitterCost;
 }
 
+buyCatsitterBtn.addEventListener('click', function() {
+    if (pets >= catsitterCost) {
+        pets = pets - catsitterCost;
+        catsitters = catsitters + 1;
+        catsitterCountDisplay.textContent = 'Catsitters: ' + catsitters;
+        updateDisplay();
+    }
+});
