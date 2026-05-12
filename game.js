@@ -32,7 +32,7 @@ function buildShop() {
         <button id="buy-${item.id}">
         ${item.name} - ${item.cost} pets
         </button>
-        <span id="count-${item.id}">${item.count}</span>
+        <span id="count-${item.id}">${item.count} owned </span>
         </div>
         `;
     });
