@@ -34,7 +34,7 @@ body {
     margin: 0;
 }
 
-#buy-catsitter {
+.shop-item button {
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
@@ -44,7 +44,7 @@ body {
     border-radius: 8px;
 }
 
-#buy-catsitter:disabled {
+.shop-item button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
