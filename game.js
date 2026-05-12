@@ -5,6 +5,54 @@ const shopItems = [
         cost: 50,
         petsPerSecond: 0.5,
         count: 0
+    },
+
+    {
+        id: 'catsitter',
+        name: 'Catsitter',
+        cost: 100,
+        petsPerSecond: 0.7,
+        count: 0
+    },
+
+    {
+        id: 'catgroomer',
+        name: 'Cat Groomer',
+        cost: 1000,
+        petsPerSecond: 1,
+        count: 0
+    },
+
+    {
+        id: 'cattrainer',
+        name: 'Cat Trainer',
+        cost: 10000,
+        petsPerSecond: 1.5,
+        count: 0
+    },
+
+    {
+        id: 'veterinarian',
+        name: 'Veterinarian',
+        cost: 50000,
+        petsPerSecond: 2,
+        count: 0
+    },
+
+    {
+        id: 'catsanctuary',
+        name: 'Cat Sanctuary',
+        cost: 100000,
+        petsPerSecond: 2.2,
+        count: 0
+    },
+
+    {
+        id: 'catpriest',
+        name: 'Cat Priest',
+        cost: 200000,
+        petsPerSecond: 2.5,
+        count: 0
     }
 ];
 
