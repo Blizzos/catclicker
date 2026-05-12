@@ -92,7 +92,7 @@ function setupShopListeners() {
             if (pets >= item.cost) {
                 pets -= item.cost;
                 item.count += 1;
-                document.getElementById('count-' + item.id).textContent = item.count;
+                document.getElementById('count-' + item.id).textContent = item.count + ' owned';
                 updateDisplay();
             }
         });
