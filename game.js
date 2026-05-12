@@ -51,6 +51,11 @@ function setupShopListeners() {
     });
 }
 
+catImage.addEventListener('click', function() {
+    pets += 1;
+    updateDisplay();
+});
+
 function updateDisplay() {
     petCountDisplay.textContent = 'Pets: ' + Math.floor(pets);
 
