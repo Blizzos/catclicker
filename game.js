@@ -67,3 +67,14 @@ function updateDisplay() {
     localStorage.setItem('pets', pets);
     localStorage.setItem('shopItems', JSON.stringify(shopItems));
 }
+
+setInterval(function() {
+    shopItems.forEach(function(item) {
+        pets += item.count * item.petsPerSecond;
+    });
+    updateDisplay();
+}, 1000);
+
+buildShop();
+setupShopListeners();
+updateDisplay();
