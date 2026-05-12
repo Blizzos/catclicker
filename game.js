@@ -37,3 +37,33 @@ function buildShop() {
         `;
     });
 }
+
+function setupShopListeners() {
+    shopItems.forEach(function(item) {
+        document.getElementById('buy-' + item.id).addEventListener('click', function() {
+            if (pets >= item.cost) {
+                pets -= item.cost;
+                item.count += 1;
+                document.getElementById('count-' + item.id).textContent = item.count;
+                updateDisplay();
+            }
+        });
+    });
+}
+
+function updateDisplay() {
+    petCountDisplay.textContent = 'Pets: ' + Math.floor(pets);
+
+    let totalPerSecond = 0;
+    shopItems.forEach(function(item) {
+        totalPerSecond += item.count * item.petsPerSecond;
+    });
+    multiplierDisplay.textContent = 'Pets per sec: ' + totalPerSecond;
+
+    shopItems.forEach(function(item) {
+        document.getElementById('buy-' + item.id).disabled = pets < item.cost;
+    });
+
+    localStorage.setItem('pets', pets);
+    localStorage.setItem('shopItems', JSON.stringify(shopItems));
+}
