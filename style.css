@@ -36,6 +36,7 @@ body {
 
 .shop-item button {
     padding: 10px 20px;
+    margin-bottom: 10px;
     font-size: 1rem;
     cursor: pointer;
     background-color: #c97b3a;
